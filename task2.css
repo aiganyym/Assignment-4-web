@@ -1,0 +1,133 @@
+/* =========================================================
+   Task 2 — AITU Hack 2026 registration
+   The validation rules live in HTML attributes (type, required,
+   min, max, step, minlength, maxlength). CSS only SHOWS the result.
+   ========================================================= */
+
+:root {
+  --hack: #0F6B5F;
+  --hack-dark: #16302B;
+  --bs-body-font-family: 'Montserrat', system-ui, sans-serif;
+  --bs-body-color: var(--hack-dark);
+  --bs-body-bg: #E6EFEC;
+}
+
+.hack {
+  --bs-card-border-radius: 1.2rem;
+  --bs-card-bg: #fff;
+  border: 0;
+  box-shadow: 0 16px 40px rgba(22, 48, 43, .15);
+}
+
+.hack-head {
+  background-color: var(--hack);
+  color: #fff;
+  padding: 1.25rem 1.25rem;
+  border: 0;
+}
+
+.hack-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.hack-sub {
+  opacity: .85;
+  font-size: .85rem;
+}
+
+.hack-body {
+  padding: 1.25rem;
+}
+
+.req {
+  color: #dc3545;
+}
+
+.form-label,
+legend {
+  float: none;
+  width: auto;
+  font-size: .85rem;
+  font-weight: 700;
+  margin-bottom: .35rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--hack);
+  box-shadow: 0 0 0 .25rem rgba(15, 107, 95, .22);
+}
+
+.form-check-input:checked {
+  background-color: var(--hack);
+  border-color: var(--hack);
+}
+
+/*user-invalid */
+.form-control:user-invalid,
+.form-select:user-invalid,
+.form-check-input:user-invalid {
+  border-color: var(--bs-form-invalid-border-color);
+}
+
+.form-control:user-invalid:focus,
+.form-select:user-invalid:focus {
+  box-shadow: 0 0 0 .25rem rgba(var(--bs-danger-rgb), .25);
+}
+
+.form-control:user-invalid ~ .invalid-feedback,
+.form-select:user-invalid ~ .invalid-feedback,
+.form-check-input:user-invalid ~ .invalid-feedback,
+.btn-check:user-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.btn-check:user-invalid + .btn {
+  border-color: var(--bs-form-invalid-border-color);
+}
+
+.form-control:user-valid,
+.form-select:user-valid {
+  border-color: var(--bs-form-valid-border-color);
+}
+
+.form-check-input:user-invalid ~ .form-check-label {
+  color: var(--bs-form-invalid-color);
+}
+
+/*  Experience level buttons  */
+.btn-check:checked + .btn-outline-secondary {
+  --bs-btn-active-bg: var(--hack);
+  --bs-btn-active-border-color: var(--hack);
+  --bs-btn-active-color: #fff;
+}
+
+.btn-check:focus-visible + .btn-outline-secondary {
+  box-shadow: 0 0 0 .25rem rgba(15, 107, 95, .35);
+}
+
+/*Submit button */
+.btn-hack {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--hack);
+  --bs-btn-border-color: var(--hack);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--hack-dark);
+  --bs-btn-hover-border-color: var(--hack-dark);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--hack-dark);
+  --bs-btn-active-border-color: var(--hack-dark);
+  --bs-btn-focus-shadow-rgb: 15, 107, 95;
+  --bs-btn-border-radius: 50rem;
+  --bs-btn-padding-x: 2rem;
+  --bs-btn-padding-y: .6rem;
+  --bs-btn-font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .hack-head { padding: 1.6rem 2rem; }
+  .hack-body { padding: 2rem; }
+  .hack-title { font-size: 1.8rem; }
+}

@@ -1,0 +1,181 @@
+:root {
+  --green: #0F6B5F;
+  --orange: #F2A93B;
+  --ink: #16302B;
+  --field: #F4F7F5;
+  --mist: #E6EFEC;
+
+  --bs-body-font-family: 'Montserrat', system-ui, sans-serif;
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--mist);
+}
+
+body {
+  font-weight: 500;
+}
+
+/* Card */
+.ticket {
+  --bs-card-border-radius: 1.4rem;
+  --bs-card-bg: #fff;
+  --bs-border-radius: .7rem;         
+  border: 0;
+  box-shadow: 0 20px 45px rgba(22, 48, 43, .16);
+}
+
+.ticket-head {
+  background-color: var(--green);
+  color: #fff;
+  padding: 1.1rem 1.25rem;
+  border: 0;
+}
+
+.ticket-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ticket-body {
+  padding: 1.25rem;
+}
+
+/* Labels  */
+.ticket .form-label,
+.ticket legend {
+  float: none;
+  width: auto;
+  margin-bottom: .35rem;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+/*  Text fields, dates, selects  */
+.ticket .form-control,
+.ticket .form-select {
+  background-color: var(--field);
+  border: 1px solid var(--mist);
+  color: var(--ink);
+  font-size: .85rem;
+}
+
+.ticket .form-control:focus,
+.ticket .form-select:focus {
+  background-color: #fff;
+  border-color: var(--green);
+  box-shadow: 0 0 0 .25rem rgba(15, 107, 95, .22);
+}
+
+/*  Floating labels */
+.ticket .form-floating > .form-control {
+  padding-top: 1.65rem;
+  padding-bottom: .35rem;
+}
+
+.ticket .form-floating > .form-control::placeholder {
+  color: var(--ink);
+  opacity: .8;
+}
+
+.ticket .form-floating > .form-control ~ label {
+  opacity: .6;
+  font-size: .85rem;
+  transform: scale(.82) translateY(-.55rem) translateX(.15rem);
+}
+
+/*  Trip type */
+.trip-toggle .btn {
+  --bs-btn-color: var(--green);
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: var(--green);
+  --bs-btn-hover-color: var(--green);
+  --bs-btn-hover-bg: var(--mist);
+  --bs-btn-hover-border-color: var(--green);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--green);
+  --bs-btn-active-border-color: var(--green);
+  --bs-btn-focus-shadow-rgb: 242, 169, 59;
+  --bs-btn-border-radius: 50rem;
+  --bs-btn-padding-x: 1.1rem;
+  --bs-btn-padding-y: .4rem;
+  --bs-btn-font-size: .8rem;
+  --bs-btn-font-weight: 700;
+}
+
+/*  Carriage class radios, switch, checkbox  */
+.ticket .form-check-input:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.ticket .form-check-input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 .25rem rgba(242, 169, 59, .45);
+}
+
+.ticket .form-switch .form-check-input:focus {
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%230F6B5F'/%3e%3c/svg%3e");
+}
+
+.ticket .form-check-label {
+  font-size: .8rem;
+}
+
+/*  Phone */
+.ticket .input-group-text {
+  background-color: var(--green);
+  border-color: var(--green);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+/*  Buttons  */
+.btn-find,
+.btn-clear {
+  --bs-btn-border-radius: 50rem;
+  --bs-btn-padding-x: 1.9rem;
+  --bs-btn-padding-y: .6rem;
+  --bs-btn-font-size: .85rem;
+  --bs-btn-font-weight: 700;
+}
+
+.btn-find {
+  --bs-btn-color: var(--ink);
+  --bs-btn-bg: var(--orange);
+  --bs-btn-border-color: var(--orange);
+  --bs-btn-hover-color: var(--ink);
+  --bs-btn-hover-bg: #e59a26;
+  --bs-btn-hover-border-color: #e59a26;
+  --bs-btn-active-color: var(--ink);
+  --bs-btn-active-bg: #d98e1f;
+  --bs-btn-active-border-color: #d98e1f;
+  --bs-btn-focus-shadow-rgb: 22, 48, 43;
+}
+
+.btn-clear {
+  --bs-btn-color: var(--ink);
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: var(--ink);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--ink);
+  --bs-btn-hover-border-color: var(--ink);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--ink);
+  --bs-btn-active-border-color: var(--ink);
+  --bs-btn-focus-shadow-rgb: 242, 169, 59;
+}
+
+/*  Bigger screens */
+@media (min-width: 768px) {
+  .ticket-head {
+    padding: 1.6rem 2rem;
+  }
+  .ticket-title {
+    font-size: 1.5rem;
+  }
+  .ticket-body {
+    padding: 2rem;
+  }
+}
